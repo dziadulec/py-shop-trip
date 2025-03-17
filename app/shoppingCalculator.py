@@ -36,7 +36,7 @@ class ShoppingCalculator:
 
         product_list = self.customer.product_cart
         for shop in self.shops:
-            self.get_road_cost(shop)
+            road = self.get_road_cost(shop)
             price = 0
             receipt = []
             shop_list = shop.products
@@ -53,6 +53,6 @@ class ShoppingCalculator:
             shop_cost.append(price)
 
             receipts.append(receipt)
-            all_cost.append(round(price + self.get_road_cost(shop), 2))
+            all_cost.append(round(price + road, 2))
 
         Printer.print_info(receipts, all_cost, shop_cost, self.customer)
