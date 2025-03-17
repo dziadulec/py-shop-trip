@@ -41,7 +41,8 @@ class ShoppingCalculator:
             receipt = []
             shop_list = shop.products
             for product in product_list:
-                products_price = shop_list[product] * product_list[product]
+                quantity = product_list[product]
+                products_price = shop_list[product] * quantity
                 price += products_price
                 if products_price % 1 == 0:
                     products_price = int(products_price)

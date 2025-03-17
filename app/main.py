@@ -25,6 +25,3 @@ def shop_trip() -> None:
             fuel
         )
         cost.get_shopping_price()
-
-
-# shop_trip()
